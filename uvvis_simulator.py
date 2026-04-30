@@ -351,8 +351,6 @@ class UVVisSimulator:
             logging.warning("No data found to export.")
             return
 
-        print("Generating final reports...")
-
         # 1. Statistical Calculations
         matrix = np.atleast_2d(self.data['total_list'])
         self.data['avg'] = np.mean(matrix, axis=0)
