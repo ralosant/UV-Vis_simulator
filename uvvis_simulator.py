@@ -298,8 +298,9 @@ class UVVisSimulator:
                 # Plot individual components
                 if n_comp:
                     for p in res["peaks"][:n_comp]:
-                        plt.plot(self.x, p, ls=":", lw=0.8,
-                                 color=color, alpha=0.3)
+                        if p.max() >= 200:
+                            plt.plot(self.x, p, ls=":", lw=0.8,
+                                     color=color, alpha=0.3)
 
         # Plot Average and Deviation
         plt.plot(
